@@ -6,6 +6,36 @@
   <title>Vadnica HTML</title>
   <link rel="stylesheet" href="style.css">
 </head>
+  <!-- Popup okno -->
+<div id="popup" class="popup">
+  <h2>Nasvet!</h2>
+  <p>Ta vadnica ti bo pomagala razumeti osnovne koncepte. Klikni gumb, da nadaljuješ.</p>
+  <button id="closePopupBtn">Zapri</button>
+</div>
+
+<script>
+// funkcija za prikaz popup
+function showPopup() {
+  const popup = document.getElementById('popup');
+  popup.style.display = 'block';
+}
+
+// funkcija za zapiranje popup
+function closePopup() {
+  const popup = document.getElementById('popup');
+  popup.style.display = 'none';
+}
+
+// prikaži popup 2 sekundi po nalaganju strani
+window.addEventListener('load', () => {
+  setTimeout(showPopup, 2000);
+
+  // poveži gumb z funkcijo close
+  const btn = document.getElementById('closePopupBtn');
+  btn.addEventListener('click', closePopup);
+});
+</script>
+
 <body>
   <header>
     <nav>
@@ -27,27 +57,6 @@
         <a href="page3.html" class="btn">Nadaljuj na CSS vadnico</a>
       </div>
     </section>
-    <!-- Popup okno -->
-<div id="popup" class="popup">
-  <h2>Nasvet!</h2>
-  <p>Ta vadnica ti bo pomagala razumeti osnovne koncepte. Klikni gumb, da nadaljuješ.</p>
-  <button onclick="closePopup()">Zapri</button>
-</div>
-
-<script>
-function showPopup() {
-  document.getElementById('popup').style.display = 'block';
-}
-
-function closePopup() {
-  document.getElementById('popup').style.display = 'none';
-}
-
-// Prikaži popup 2 sekundi po nalaganju strani
-window.onload = function() {
-  setTimeout(showPopup, 2000);
-};
-</script>
   </main>
 
   <footer>
