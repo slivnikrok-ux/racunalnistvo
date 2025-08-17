@@ -27,6 +27,27 @@
         <a href="index.html" class="btn">Nazaj na Domov</a>
       </div>
     </section>
+    <!-- Popup okno -->
+<div id="popup" class="popup">
+  <h2>Nasvet!</h2>
+  <p>Ta vadnica ti bo pomagala razumeti osnovne koncepte. Klikni gumb, da nadaljuješ.</p>
+  <button onclick="closePopup()">Zapri</button>
+</div>
+
+<script>
+function showPopup() {
+  document.getElementById('popup').style.display = 'block';
+}
+
+function closePopup() {
+  document.getElementById('popup').style.display = 'none';
+}
+
+// Prikaži popup 2 sekundi po nalaganju strani
+window.onload = function() {
+  setTimeout(showPopup, 2000);
+};
+</script>
   </main>
 
   <footer>
