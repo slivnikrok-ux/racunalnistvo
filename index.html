@@ -1,239 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="sl">
 <head>
-  <meta charset="utf-8" />
-  <title>Računalništvo 🔍</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #e2ebf0, #ffffff);
-      color: #2c3e50;
-      padding: 40px;
-      margin: 0;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    header {
-      text-align: center;
-      padding-bottom: 20px;
-    }
-
-    h1 {
-      margin: 0;
-    }
-
-    #themeToggle {
-      margin-top: 10px;
-      padding: 8px 16px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1em;
-      background: #4285F4;
-      color: white;
-    }
-
-    #themeToggle:hover {
-      background: #3367D6;
-    }
-
-    main {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    #searchBox {
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    input[type="text"] {
-      padding: 10px;
-      width: 300px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1em;
-    }
-
-    button.searchBtn {
-      padding: 10px 20px;
-      border: none;
-      background: #4285F4;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1em;
-    }
-
-    button.searchBtn:hover {
-      background: #3367D6;
-    }
-
-    #results {
-      padding: 10px;
-    }
-
-    .result {
-      background: #fff;
-      border-radius: 6px;
-      padding: 15px;
-      margin-bottom: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .result a {
-      font-size: 1.2em;
-      color: #1a0dab;
-      text-decoration: none;
-    }
-
-    .result a:hover {
-      text-decoration: underline;
-    }
-
-    .result p {
-      color: #555;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #222;
-      color: white;
-      margin-top: 40px;
-    }
-
-    /* Temna tema */
-    body.dark {
-      background: #1e1e1e;
-      color: #f0f0f0;
-    }
-
-    body.dark .result {
-      background: #2a2a2a;
-      color: #f0f0f0;
-    }
-
-    body.dark input[type="text"] {
-      background: #333;
-      color: #f0f0f0;
-      border: 1px solid #555;
-    }
-
-    body.dark button.searchBtn {
-      background: #555;
-    }
-
-    body.dark button.searchBtn:hover {
-      background: #777;
-    }
-
-    body.dark #themeToggle {
-      background: #555;
-    }
-
-    body.dark #themeToggle:hover {
-      background: #777;
-    }
-
-/* Responsive za telefone */
-@media (max-width: 600px) {
-  body {
-    padding: 20px;
-  }
-
-  input[type="text"] {
-    width: 95%;      /* bolj široko polje za tipkanje */
-    font-size: 1.1em; /* malo večja pisava */
-    padding: 12px;    /* več prostora za prste */
-  }
-
-  button.searchBtn, #themeToggle {
-    width: 95%;        /* gumb na celotno širino */
-    font-size: 1.1em;  /* večja pisava za gumb */
-    padding: 12px;     /* večji klikabilni prostor */
-    margin-top: 10px;
-  }
-
-  #results {
-    width: 100%;
-  }
-}
-
-
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Računalništvo - Vadnice</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Računalništvo 🔍</h1>
-    <button id="themeToggle">🌙 Temna tema</button>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html" class="active">Domov</a></li>
+        <li><a href="page2.html">Vadnica 1</a></li>
+        <li><a href="page3.html">Vadnica 2</a></li>
+        <li><a href="page4.html">Vadnica 3</a></li>
+      </ul>
+    </nav>
+    <h1>Računalništvo 🔧 Vadnice</h1>
   </header>
 
   <main>
-    <div id="searchBox">
-      <input type="text" id="query" placeholder="Išči po Googlu...">
-      <button class="searchBtn" onclick="searchGoogle()">Išči</button>
-    </div>
-    <div id="results"></div>
+    <section class="intro">
+      <h2>Dobrodošli v svetu računalništva!</h2>
+      <p>Na tej strani najdeš vadnice za HTML, CSS, JavaScript in še več.  
+      Klikni na gumb, če želiš izvedeti več o posamezni vadnici.</p>
+      <img src="https://via.placeholder.com/600x300" alt="Računalništvo" class="main-img">
+      <div class="buttons">
+        <a href="page2.html" class="btn">Izvedi več o HTML</a>
+        <a href="page3.html" class="btn">Izvedi več o CSS</a>
+        <a href="page4.html" class="btn">Izvedi več o JavaScript</a>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>© 2025 Računalništvo</p>
+    <p>&copy; 2025 Računalništvo Vadnice</p>
   </footer>
 
-  <script>
-    // 🔑 Vnesi svoje podatke tukaj:
-    const API_KEY = "AIzaSyALlvc4JtIZSlM8wiozKQYaKIlb3sPXNus";
-    const CX = "5335f6781a75f4ec5";
-
-    async function searchGoogle() {
-      const query = document.getElementById("query").value;
-      const url = `https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${CX}&q=${encodeURIComponent(query)}`;
-      
-      const response = await fetch(url);
-      const data = await response.json();
-      
-      const resultsDiv = document.getElementById("results");
-      resultsDiv.innerHTML = "";
-
-      if (!data.items) {
-        resultsDiv.innerHTML = "<p>Ni rezultatov.</p>";
-        return;
-      }
-
-      data.items.forEach(item => {
-        const div = document.createElement("div");
-        div.className = "result";
-        div.innerHTML = `
-          <a href="${item.link}" target="_blank">${item.title}</a>
-          <p>${item.snippet}</p>
-        `;
-        resultsDiv.appendChild(div);
-      });
-    }
-
-    // Temna/svetla tema
-    const themeToggle = document.getElementById("themeToggle");
-    const body = document.body;
-
-    // Nastavi temo ob naložitvi strani
-    if (localStorage.getItem("theme") === "dark") {
-      body.classList.add("dark");
-      themeToggle.textContent = "☀️ Svetla tema";
-    }
-
-    themeToggle.addEventListener("click", () => {
-      body.classList.toggle("dark");
-      if (body.classList.contains("dark")) {
-        themeToggle.textContent = "☀️ Svetla tema";
-        localStorage.setItem("theme", "dark");
-      } else {
-        themeToggle.textContent = "🌙 Temna tema";
-        localStorage.setItem("theme", "light");
-      }
-    });
-  </script>
 </body>
 </html>
-
-
