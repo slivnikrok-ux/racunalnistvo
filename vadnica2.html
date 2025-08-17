@@ -1,0 +1,14 @@
+<div id="popup2" class="popup">
+  <h2>Nasvet za Vadnico 2</h2>
+  <p>To je CSS vadnica! Tukaj boš spoznal stiliziranje spletnih strani.</p>
+  <button id="closePopup2">Zapri</button>
+</div>
+
+<script>
+function showPopup2() { document.getElementById('popup2').style.display='block'; }
+function closePopup2() { document.getElementById('popup2').style.display='none'; }
+window.addEventListener('load', () => {
+  setTimeout(showPopup2, 1000);
+  document.getElementById('closePopup2').addEventListener('click', closePopup2);
+});
+</script>
