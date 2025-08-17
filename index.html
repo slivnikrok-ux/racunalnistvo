@@ -136,25 +136,30 @@
       background: #777;
     }
 
-    /* Responsive za telefone */
-    @media (max-width: 600px) {
-      body {
-        padding: 20px;
-      }
+/* Responsive za telefone */
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
 
-      input[type="text"], button {
-        width: 90%;
-        font-size: 1em;
-      }
+  input[type="text"] {
+    width: 95%;      /* bolj široko polje za tipkanje */
+    font-size: 1.1em; /* malo večja pisava */
+    padding: 12px;    /* več prostora za prste */
+  }
 
-      button.searchBtn {
-        margin-top: 10px;
-      }
+  button.searchBtn, #themeToggle {
+    width: 95%;        /* gumb na celotno širino */
+    font-size: 1.1em;  /* večja pisava za gumb */
+    padding: 12px;     /* večji klikabilni prostor */
+    margin-top: 10px;
+  }
 
-      #results {
-        width: 95%;
-      }
-    }
+  #results {
+    width: 100%;
+  }
+}
+
 
   </style>
 </head>
@@ -230,4 +235,5 @@
   </script>
 </body>
 </html>
+
 
