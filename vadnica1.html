@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <title>Vadnica 1</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: #fff8e1;
+    }
+    h1 { text-align: center; }
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      max-width: 400px;
+      text-align: center;
+      z-index: 1000;
+    }
+    .popup button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      background: #4285F4;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .popup button:hover { background: #3367D6; }
+  </style>
+</head>
+<body>
+  <h1>Vadnica 1</h1>
+  <p>Dobrodošel v prvi vadnici! Tukaj boš izvedel osnove računalništva.</p>
+
+  <!-- Popup -->
+  <div id="popup1" class="popup">
+    <h2>Nasvet za Vadnico 1</h2>
+    <p>Tu je nekaj nasvetov za prvo vadnico. Klikni Zapri, da nadaljuješ.</p>
+    <button id="closePopup1">Zapri</button>
+  </div>
+
+  <script>
+    function showPopup1() {
+      document.getElementById('popup1').style.display = 'block';
+    }
+    function closePopup1() {
+      document.getElementById('popup1').style.display = 'none';
+    }
+
+    window.addEventListener('load', () => {
+      setTimeout(showPopup1, 1000); // pokaži popup po 1 sekundi
+      document.getElementById('closePopup1').addEventListener('click', closePopup1);
+    });
+  </script>
+</body>
+</html>
+
