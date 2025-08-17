@@ -1,70 +1,87 @@
-/* Osnovni stil za celotno stran */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
-  color: #333;
+  background: #f0f2f5;
 }
 
-/* Header z navigacijo */
 header {
-  background-color: #4CAF50;
+  background: #4285F4;
   color: white;
-  padding: 20px;
   text-align: center;
+  padding: 10px 0;
 }
 
-nav a {
-  color: white;
-  margin: 0 10px;
+nav ul.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+nav ul.menu li {
+  margin: 0 15px;
+}
+
+nav ul.menu li a {
   text-decoration: none;
+  color: white;
   font-weight: bold;
 }
 
-nav a:hover {
+nav ul.menu li a.active {
   text-decoration: underline;
 }
 
-/* Glavni del strani */
+h1 {
+  margin: 5px 0;
+}
+
 main {
-  padding: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
 }
 
-/* Footer */
-footer {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
+.intro img.main-img {
   width: 100%;
+  border-radius: 8px;
+  margin: 15px 0;
 }
 
-/* Google iskanje input in button */
-#searchForm {
-  margin-top: 20px;
-  text-align: center;
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
-#searchInput {
-  padding: 8px;
-  width: 70%;
-  max-width: 400px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-#searchButton {
-  padding: 8px 15px;
-  background-color: #4CAF50;
+.btn {
+  padding: 10px 20px;
+  background: #4285F4;
   color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
-#searchButton:hover {
-  background-color: #45a049;
+.btn:hover {
+  background: #3367D6;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #ddd;
+}
+
+/* Responsive za telefone */
+@media (max-width: 600px) {
+  nav ul.menu {
+    flex-direction: column;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
 }
